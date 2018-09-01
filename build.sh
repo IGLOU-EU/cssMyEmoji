@@ -47,6 +47,6 @@ while true; do
 done
 
 echo "$cssOut" > "$emojiFile"
-echo "<!DOCTYPE html><html><head><meta charset="utf-8"><link rel='stylesheet' type='text/css' href='emoji.css'><style>body{display:flex;flex-wrap:wrap}span{font-size:6em}</style></head><body>${htmlOut}</body></html>" > "$emojiTest"
+echo "<!DOCTYPE html><html><head><meta charset="utf-8"><link rel='stylesheet' type='text/css' href='emoji.css'><style>body{display:flex;flex-wrap:wrap}span{font-size:6em;padding: 10px}</style></head><body>${htmlOut}</body></html>" > "$emojiTest"
 
 exit 0
