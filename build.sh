@@ -27,6 +27,8 @@ do
         data=${data// &amp;/}
         data=${data//⊛ /}
         data=${data//[⊛’:“”\!.,]/}
+        data=${data//keycap_#/keycap_sharp}
+        data=${data//keycap_\*/keycap_asterisk}
 
         cldr[$entrie]=$data
         ((entrie++))
