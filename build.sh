@@ -1,4 +1,8 @@
 #!/bin/bash
+# Copyright 2018 Iglou.eu
+# Copyright 2018 Adrien Kara
+# license that can be found in the LICENSE file.
+
 emojiList="https://unicode.org/emoji/charts/full-emoji-list.html"
 emojiFile="$(pwd)/emoji.css"
 emojiTest="$(pwd)/test.html"
