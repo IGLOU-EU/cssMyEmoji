@@ -27,14 +27,16 @@
 
 1. **Download emoji.css, and use it :**
 ```html
+<meta charset="UTF-8">
 <link rel='stylesheet' type='text/css' href='emoji.css'>
 ```
 ```html
-<span class="emoji grinning_face"></span>`
+<span role="image" class="emoji grinning_face"></span>`
 ```
 
 2. **See test.html inside a web browser, for preview**
 3. **Based on official [Full Emoji List](https://unicode.org/emoji/charts/full-emoji-list.html)**
+4. **[Emoji Compatibility List](http://caniemoji.com/)**
 
 ## :shipit: **DISCLAIMER**
 
