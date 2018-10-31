@@ -11,7 +11,7 @@ emojiTest="$(pwd)/test.html"
 emojiList="$(curl ${emojiList}|grep -e "'chars'" -e "'name'")"
 
 line=0
-emoji=0
+emoji_tt=0
 entrie=0
 cssOut=""
 htmlOut=""
@@ -42,7 +42,7 @@ do
         ((line++))
 done
 
-emoji=$entrie
+emoji_tt=$entrie
 
 while true; do
     if (("$entrie" < "0")); then
@@ -55,7 +55,7 @@ while true; do
     ((entrie--))
 done
 
-echo "Total of emoji: $emoji"
+echo "Total of emoji: $emoji_tt"
 
 echo "$cssOut" > "$emojiFile"
 echo "Css updated in '$emojiFile'"
