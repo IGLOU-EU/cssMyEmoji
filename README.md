@@ -6,7 +6,7 @@
 
 ## CssMyEmoji is a lightweight css library
 
-* **Tiny**, only 829K for 1719 chars
+* **Tiny**, only 77K for 1718 chars
 * **Simple**, use emoji class and emoji name
 * **Complete**, full UTF-8 emoji list (1719 emoji)
 * **W3C valid**, use "content" for add content ...
