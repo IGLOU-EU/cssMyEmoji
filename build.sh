@@ -10,6 +10,7 @@ emojiFile="$(pwd)/emoji.css"
 emojiTest="$(pwd)/test.html"
 emojiListFile="$(pwd)/emoji.list"
 
+flag=0
 line=0
 debug=0
 entrie=0
@@ -21,6 +22,7 @@ emojiList="$(grep -e "'chars'" -e "'name'" "$emojiListFile")"
 [[ $debug -ne 1 ]] && rm "$emojiListFile"
 
 IFS=$'\n'
+echo -n "Building "
 for data in $emojiList
 do
     if [ $((line%2)) -eq 0 ]; then
@@ -38,15 +40,20 @@ do
         data=${data//[⊛’:“”\!.,]/}
         data=${data//+( )/_}
 
-        cldr[$entrie]=$data
+        [[ $data = [0-9]* ]] && data="\\$data"
+        echo "$data" | file -i - | grep -v "ascii" > /dev/null && data="$(echo "$data" | iconv -f utf8 -t ascii//TRANSLIT//IGNORE)"
+
+        cldr[$entrie]="$data"
         ((entrie++))
     fi
 
-        ((line++))
+    [[ $flag -ne ${#line} ]] && { echo -n "."; flag="${#line}"; }
+
+    ((line++))
 done
 
 ((entrie--))
-echo "Total of emoji: $entrie"
+echo -e "\nTotal of emoji: $entrie"
 
 while true; do
     if (("$entrie" < "0")); then
