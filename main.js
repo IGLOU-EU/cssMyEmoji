@@ -16,7 +16,7 @@ emojis.forEach(emoji => {
     emoji.getElementsByTagName('sup')[0].addEventListener(
         'click', (event) => {
             event.stopPropagation();
-            let className = `.${event.target.parentElement.classList[1]}`;
+            let className = event.target.parentElement.classList[1];
             copyToClipBoard(className);
         }
     );
