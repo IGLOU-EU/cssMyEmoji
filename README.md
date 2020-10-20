@@ -6,9 +6,9 @@
 
 ## CssMyEmoji is a lightweight css library
 
-* **Tiny**, only 77K for 1718 Emoji
+* **Tiny**, 213K for 3511 Emoji
 * **Simple**, use emoji class and emoji name
-* **Complete**, full UTF-8 emoji list (1719 emoji)
+* **Complete**, full UTF-8 emoji list (3511 emoji)
 * **W3C valid**, use "content" for add content ...
 * **No bullshit**, no size forced, font-size for change emoji scale
 
@@ -19,7 +19,7 @@
 * grinning face = **grinning_face**
 * ⊛ smiling face with 3 hearts = **smiling_face_with_3_hearts**
 * A button (blood type) = **A_button**
-* keycap_* = **keycap_asterisk**
+* keycap_\* = **keycap_asterisk**
 * keycap_# = **keycap_sharp**
 * ...
 
